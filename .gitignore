@@ -1,6 +1,10 @@
 ### MAC
 .DS_Store
 *.csv
+### pyc files 
+*pyc
+*.idea
+*.scrapy
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
