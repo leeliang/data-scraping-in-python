@@ -56,18 +56,21 @@ def writeToCsv(file_name, text=[]):
 # read fund list
 
 if __name__ == '__main__':
-    fund_list = pd.read_csv('FundList.csv',header=None,names=['code','name','url'],dtype={'code':str})
+    #fund_list = pd.read_csv('FundList.csv',header=None,names=['code','name','url'],dtype={'code':str})
 
 
     i = 0
-    for code in fund_list.code:
+    codes = ['160212']
+    #for code in fund_list.code:
+    for code in codes:
         try:
             csv_name = code+'.csv'
-            file_path = os.path.join(os.getcwd(),csv_name)
-            if os.path.exists(file_path):
-                print file_path
-                i = i + 1
-                continue 
+            # file_path = os.path.join(os.getcwd(),csv_name)
+            # if os.path.exists(file_path):
+            #     print file_path
+            #     i = i + 1
+            #     continue 
+            print code
             result = getFundNAV(code)
             writeToCsv(csv_name,result)
             print "Finished fund: %s" % code
