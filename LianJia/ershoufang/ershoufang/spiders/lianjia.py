@@ -54,6 +54,7 @@ class LianjiaSpider(scrapy.Spider):
         #base_url = 'https://sh.lianjia.com'
         for href in house_href:
             #url = base_url + href
+
             yield scrapy.Request(url=href,callback=self.parse_house)
             #
     def parse_house(self,response):

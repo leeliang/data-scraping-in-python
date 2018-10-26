@@ -7,7 +7,7 @@
 import pymongo
 
 class ErshoufangPipeline(object):
-    collection = 'ershoufang_feb05'
+    collection = 'ershoufang_10oct09'
 
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
